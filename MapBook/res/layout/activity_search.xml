@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+			    <LinearLayout
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+			        
+			        <RadioGroup
+        				android:id="@+id/radioGroup"
+        				android:layout_width="wrap_content"
+        				android:layout_height="wrap_content" >
+				        <RadioButton
+				        	android:id="@+id/radioLocName"
+				        	android:layout_width="wrap_content"
+				        	android:layout_height="wrap_content"
+				        	android:checked="true"
+				        	android:textColor="#FFFFFF"
+				        	android:text="Location" />
+				        
+				        <RadioButton
+					        android:id="@+id/radioAddress"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:textColor="#FFFFFF"
+					        android:text="Address" />
+			        </RadioGroup>
+			        </LinearLayout>
+
+			    
+        <EditText
+			android:id="@+id/editTextSearch"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:textColor="#FFFFFF"
+			android:ems="10" >
+		</EditText>
+        <Button
+	        android:id="@+id/search"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:background="@drawable/custom_button"
+	        android:text="Search" />
+    
+     </LinearLayout>
+
+    <ListView
+        android:id="@+id/searchListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

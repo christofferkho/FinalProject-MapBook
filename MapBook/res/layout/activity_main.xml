@@ -1,0 +1,121 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+   <LinearLayout 
+    android:id="@+id/profile"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#000000"
+    android:paddingBottom="5dp"
+    android:orientation="horizontal">
+    
+
+        
+        <LinearLayout 
+        android:id="@+id/profileDetails"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:layout_weight="8">
+            
+         	<TextView
+            android:id="@+id/profile_name"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:textSize="20dp"
+    		android:textColor="#FFFFFF"
+    		android:text="Developer's Profile"/>   
+    		
+         	<TextView
+            android:id="@+id/profile_city"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:textColor="#FFFFFF"
+    		android:text="Ateneo de Manila University"/>  
+    		
+         	<TextView 
+            android:id="@+id/profile_country"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+    		android:textColor="#FFFFFF"
+    		android:text="Failiffinnes"/>
+            
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000" >
+
+        <ImageButton
+            android:id="@+id/locationListViewButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.70"
+            android:adjustViewBounds="true"
+            android:maxHeight="70dp"
+            android:maxWidth="70dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/listlogo" />
+
+        <ImageButton
+            android:id="@+id/mapButton"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:maxWidth="70dp"
+            android:maxHeight="70dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:src="@drawable/maplogo" />
+
+        <ImageButton
+            android:id="@+id/createButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:maxHeight="70dp"
+            android:maxWidth="70dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add" />
+        
+        <ImageButton
+            android:id="@+id/searchOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:maxHeight="70dp"
+            android:maxWidth="70dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search" />
+
+    </LinearLayout>
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <include 
+        android:id="@+id/locationListViewFlipper"
+        layout="@layout/locationlistview"/>
+        
+        <include 
+        android:id="@+id/createViewFlipper"
+        layout="@layout/createlocation"/>
+        
+        <include 
+        android:id="@+id/mapViewFlipper"
+        layout="@layout/googlemap"/>
+
+    </ViewFlipper>
+
+</LinearLayout>

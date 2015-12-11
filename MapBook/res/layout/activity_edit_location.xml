@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:text="Location Name:" />
+
+    <EditText
+        android:id="@+id/editNewLocationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:hint="new name"
+        android:layout_marginLeft="15dp"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="15dp"
+        android:text="Address:" />
+
+    <EditText
+        android:id="@+id/editNewAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:hint="new address"
+        android:layout_marginLeft="15dp"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="15dp"
+        android:text="Notes:" />
+
+    <EditText
+        android:id="@+id/editNewNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:hint="new notes"
+        android:layout_marginLeft="15dp"
+        android:ems="10" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal" >
+        
+        <Button
+	        android:id="@+id/saveEditLocation"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/custom_button"
+		    android:layout_marginBottom="5dp"
+		    android:layout_marginLeft="5dp"
+	        android:text="Save" />
+        
+        <Button
+	        android:id="@+id/sendToOSM"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/custom_button"
+		    android:layout_marginBottom="5dp"
+		    android:layout_marginLeft="5dp"
+	        android:text="Send to OSM" />
+        
+        <Button
+	        android:id="@+id/cancelEditLocation"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textColor="#FFFFFF"
+	        android:background="@drawable/custom_button"
+		    android:layout_marginBottom="5dp"
+		    android:layout_marginLeft="5dp"
+		    android:layout_marginRight="5dp"
+	        android:text="Cancel" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GPS Coordinates:"
+        android:textColor="#FFFFFF"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            <TextView
+		        android:id="@+id/locationCoordinates"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="#FFFFFF"
+		        android:text="Error: cannot display location coordinates..." />
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
